@@ -1,0 +1,48 @@
+a {
+  color: rgb(0, 189, 30);
+}
+
+#login-buttons .login-button, .accounts-dialog .login-button {
+  background: rgb(0, 189, 30);
+  border: 1px solid white;
+}
+
+#login-buttons a, .accounts-dialog a {
+  text-decoration: none;
+}
+
+nav navbar-nav:hover {
+  background-color: white;
+  color: color: rgb(0, 120, 19);
+}
+
+.search-bar {
+  margin: 20px;
+  text-align: center;
+}
+
+.search-bar input {
+  width: 75%;
+}
+
+.video-item img {
+  max-width: 64px;
+}
+
+.video-detail .details {
+  margin: 20px;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+.vid-list {
+  display: inline;
+}
+
+.list-group-item {
+  cursor: pointer;
+}
+
+.list-group-item {
+  background-color: #eee;
+}

@@ -1,0 +1,18 @@
+{
+  "name": "learn-links",
+  "private": true,
+  "scripts": {
+    "start": "meteor run"
+  },
+  "dependencies": {
+    "axios": "^0.11.1",
+    "lodash": "^4.13.1",
+    "meteor-node-stubs": "^0.2.3",
+    "react": "^15.1.0",
+    "react-addons-pure-render-mixin": "^15.1.0",
+    "react-bootstrap": "^0.29.4",
+    "react-dom": "^15.1.0",
+    "react-router": "^2.4.1",
+    "youtube-api-search": "0.0.5"
+  }
+}
