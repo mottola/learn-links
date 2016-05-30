@@ -1,3 +1,7 @@
+body {
+  font-family: 'Josefin Sans', sans-serif;
+}
+
 a {
   color: rgb(0, 189, 30);
 }
@@ -45,4 +49,29 @@ nav navbar-nav:hover {
 
 .list-group-item {
   background-color: #eee;
+}
+
+.brand {
+  color: rgb(112, 223, 1);
+  text-align: center;
+  font-size: 60px;
+  letter-spacing: 3px;
+  text-decoration: none;
+  margin-bottom: 0;
+}
+
+.copyright {
+  text-align: center;
+}
+
+.green {
+  color: rgb(112, 223, 1);
+}
+
+.yellow {
+  color: #f4c20d;
+}
+
+.blue {
+  color: #4885ed;
 }

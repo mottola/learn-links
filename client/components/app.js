@@ -1,7 +1,9 @@
 import React from 'react';
-import Header from './header';
+import Header from './header/header';
+import Brand from './brand/brand';
 import SearchBar from './search-bar/search-bar';
 import YouTube from './youtube/youtube';
+import Footer from './footer/footer';
 // import RedditLinks from './reddit/reddit';
 // import CourseraLinks from './coursera/coursera';
 // import EdxLinks from './edx/edx';
@@ -17,6 +19,7 @@ export default (props) => {
     <div>
       <Header />
       {props.children}
+      <Brand />
       <YouTube />
       {/*<RedditLinks />
       <EdxLinks />
@@ -27,6 +30,7 @@ export default (props) => {
       <StackOverflowLinks />
       <ScholarLinks />*/}
       {/*<AmazonLinks />*/}
+    <Footer />
     </div>
   );
 };
