@@ -15,7 +15,7 @@ class YouTube extends Component {
       videos: [],
       selectedVideo: null
     };
-    this.videoSearch('learn');
+    this.videoSearch('how to learn');
   }
 
   videoSearch(term) {
@@ -28,17 +28,17 @@ class YouTube extends Component {
   }
 
   render() {
-    const videoSearch = _.debounce((term) => {this.videoSearch(term) }, 300);
+    const videoSearch = _.debounce((term) => {this.videoSearch(term) }, 1000);
 
     return (
-      <div>
+      <div className='youtube'>
         <SearchBar onSearchTermChange={videoSearch} />
+        <h3 className='results'><span className='youtube-red'>YouTube</span> Results</h3>
         <VideoDetail video={this.state.selectedVideo} />
-          <VideoList
-            onVideoSelect={selectedVideo => this.setState({selectedVideo}) }
-            videos={this.state.videos} />
+        <VideoList
+          onVideoSelect={selectedVideo => this.setState({selectedVideo}) }
+          videos={this.state.videos} />
       </div>
-
     );
   }
 }

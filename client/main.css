@@ -39,16 +39,18 @@ nav navbar-nav:hover {
   border-radius: 4px;
 }
 
-.vid-list {
-  display: inline;
-}
-
 .list-group-item {
   cursor: pointer;
 }
 
 .list-group-item {
-  background-color: #eee;
+  display: inline-block;
+  border: none;
+  padding-top: 0;
+}
+
+.results {
+  text-align: center;
 }
 
 .brand {
@@ -60,8 +62,14 @@ nav navbar-nav:hover {
   margin-bottom: 0;
 }
 
+.navbar-default {
+  background-color: white;
+  border: none;
+}
+
 .copyright {
   text-align: center;
+  margin-top: 20px;
 }
 
 .green {
@@ -74,4 +82,8 @@ nav navbar-nav:hover {
 
 .blue {
   color: #4885ed;
+}
+
+.youtube-red {
+  color: #e52d27;
 }

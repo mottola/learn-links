@@ -1,24 +1,45 @@
-// // Import the React library
+// import _ from 'lodash';
 // import React, { Component } from 'react';
-// // Import ReactDOM library
 // import ReactDOM from 'react-dom';
-// // Import axios for http requests
+// import SearchBar from '../search-bar/search-bar';
+// import VideoList from './video-list';
+// import VideoDetail from './video-detail';
 // import axios from 'axios';
-// // Import search bar
-// import SearchBar from '../search-bar';
-//
-// const khanSearch = `/api/v1/videos/<video_id>${props}`;
+// const KHAN_API = `http://www.khanacademy.org/api/v1/videos/${term}`;
 //
 // class KhanLinks extends Component {
 //   constructor(props) {
 //     super(props);
 //
-//
-//     this.state={ links: [] };
+//     this.state = {
+//       videos: [],
+//       selectedVideo: null
+//     };
+//     this.videoSearch('learning');
 //   }
 //
-//   componentWillMount() {
-//     axios.get({khanSearch});
+//   videoSearch(term) {
+//     KhanSearch({key: KHAN_API, term: term}, (videos) => {
+//       this.setState({
+//         videos: videos,
+//         selectedVideo: videos[0]
+//        }); // in ES6 videos replaces { videos: videos }
+//     });
+//   }
+//
+//   render() {
+//     const videoSearch = _.debounce((term) => {this.videoSearch(term) }, 1000);
+//
+//     return (
+//       <div>
+//         <SearchBar onSearchTermChange={videoSearch} />
+//         <h3 className='results'><span className='youtube-red'>Khan</span> Results</h3>
+//         <VideoDetail video={this.state.selectedVideo} />
+//         <VideoList
+//           onVideoSelect={selectedVideo => this.setState({selectedVideo}) }
+//           videos={this.state.videos} />
+//       </div>
+//     );
 //   }
 // }
 //
