@@ -124,9 +124,16 @@ h3 a:hover {
 .btn-primary {
   background-color: #4885ed;
   border: none;
+  margin-top: 2px;
+  margin-bottom: 5px;
+
 }
 
 .btn-primary:hover {
   background-color: rgb(112, 223, 1);
   border-color: #fff;
+}
+
+.media-heading:hover {
+  color: rgb(112, 223, 1);
 }
