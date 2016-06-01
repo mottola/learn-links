@@ -12,6 +12,7 @@ const VideoDetail = ({video}) => {
       <div className='embed-responsive embed-responsive-16by9'>
         <iframe className='embed-responsive-item' src={url}></iframe>
       </div>
+        <button className='btn btn-primary btn-md'>Add to Bookshelf</button>
     </div>
   );
 };

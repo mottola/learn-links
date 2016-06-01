@@ -5,21 +5,28 @@
 // // Import axios for http requests
 // import axios from 'axios';
 // // Import search bar
-// import SearchBar from '../search-bar';
+// import SearchBar from '../search-bar/search-bar';
 //
-// const redditSearch = `https://www.reddit.com/search.json?q=${props}`;
-//
-// class RedditLinks extends Component {
-//   constructor(props) {
-//     super(props);
+// const RedditList = `https://www.reddit.com/search.json?q=${term}`;
 //
 //
-//     this.state={ links: [] };
-//   }
+// // array.map will loop through an array
+// const RedditLinks = (props) => {
+//   const RedditItems = props.titles.map((title) => {
+//     return (
+//       <div>
+//         onVideoSelect={props.onThreadSelect}
+//         key={title}
+//         video={video}
+//       </div>
+//     );
+//   });
 //
-//   componentWillMount() {
-//     axios.get({redditSearch});
-//   }
-// }
+//   return (
+//     <ul className='col-md-4 list-group'>
+//       {linkItems}
+//     </ul>
+//   );
+// };
 //
-// export default RedditLinks;
+// export default RedditList;

@@ -33,7 +33,7 @@ class YouTube extends Component {
     return (
       <div className='youtube'>
         <SearchBar onSearchTermChange={videoSearch} />
-        <h3 className='results'><span className='youtube-red'>YouTube</span> Results</h3>
+        <h3 className='results'><a href= 'https://www.youtube.com/'><span className='youtube-red'>YouTube </span></a>Results</h3>
         <VideoDetail video={this.state.selectedVideo} />
         <VideoList
           onVideoSelect={selectedVideo => this.setState({selectedVideo}) }

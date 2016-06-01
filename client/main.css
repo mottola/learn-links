@@ -4,11 +4,26 @@ body {
 
 a {
   color: rgb(0, 189, 30);
+  background-color: #fff;
+}
+
+.navbar-nav li a {
+  color: #4885ed;
+}
+
+.navbar-nav li a:hover {
+  color: rgb(0, 189, 30);
+  background-color: #fff;
+  text-decoration: none;
 }
 
 #login-buttons .login-button, .accounts-dialog .login-button {
-  background: rgb(0, 189, 30);
+  background: #4885ed;
   border: 1px solid white;
+}
+
+#login-buttons .login-button:hover, .accounts-dialog .login-button:hover {
+  background-color: rgb(112, 223, 1);
 }
 
 #login-buttons a, .accounts-dialog a {
@@ -62,6 +77,19 @@ nav navbar-nav:hover {
   margin-bottom: 0;
 }
 
+.brand a:hover {
+  color: rgb(112, 223, 1);
+  text-decoration: none;
+}
+
+.nav navbar-nav {
+  background-color: #fff;
+}
+
+.nav navbar-nav:hover {
+  background-color: #fff;
+  text-decoration: none;
+}
 .navbar-default {
   background-color: white;
   border: none;
@@ -86,4 +114,19 @@ nav navbar-nav:hover {
 
 .youtube-red {
   color: #e52d27;
+}
+
+h3 a:hover {
+  text-decoration: none;
+  color: #ed2f28;
+}
+
+.btn-primary {
+  background-color: #4885ed;
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: rgb(112, 223, 1);
+  border-color: #fff;
 }

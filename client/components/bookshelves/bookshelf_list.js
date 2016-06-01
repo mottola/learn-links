@@ -19,7 +19,7 @@ class BookshelvesList extends Component {
             <button
               className='btn btn-danger'
               onClick={() => this.onBookshelfRemove(bookshelf)}>
-              Remove
+              Delete
             </button>
           </span>
         </li>
