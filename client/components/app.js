@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import Header from './header/header';
 import Brand from './brand/brand';
 import SearchBar from './search-bar/search-bar';
@@ -14,13 +14,25 @@ import RedditLinks from './reddit/reddit';
 // import AmazonLinks from './amazon/amazon';
 
 
-export default (props) => {
+
+class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = { term: ''};
+}
+
+  onSearchTermChange (term) {
+    this.setState({ term });
+  }
+
+  render () {
   return (
     <div>
       <Header />
-      {props.children}
+      {this.props.children}
       <Brand />
-      <YouTube />
+      <SearchBar onSearchTermChange={this.onSearchTermChange.bind(this)} term={this.state.term} />
+      <YouTube term={this.state.term} />
       {/*<RedditLinks />
       <EdxLinks />
       <CourseraLinks />
@@ -30,7 +42,10 @@ export default (props) => {
       <StackOverflowLinks />
       <ScholarLinks />*/}
       {/*<AmazonLinks />*/}
-    <Footer />
+      <Footer />
     </div>
   );
+ }
 };
+
+export default App;

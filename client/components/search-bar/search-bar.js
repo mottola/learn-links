@@ -10,15 +10,14 @@ import VideoDetail from '../youtube/video-detail';
 class SearchBar extends Component {
   constructor(props) {
     super(props);
+    this.videoSearch = _.debounce((term) => {this.props.onSearchTermChange(term) }, 700);
 
-    this.state = { term: '' };
+    this.state = { term: props.term };
   }
 
   render() {
-    const videoSearch = _.debounce((term) => {this.videoSearch(term) }, 1000);
 
     return (
-
       <div className='search-bar'>
         <input
           placeholder='What would like to learn about?'
@@ -27,11 +26,9 @@ class SearchBar extends Component {
       </div>
     );
   }
-
   onInputChange(term) {
     this.setState({term});
-    this.props.onSearchTermChange(term);
-    this.state = { term: '' };
+    this.videoSearch(term);
   }
 }
 

@@ -1,7 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Router, Route, IndexRoute, browserHistory } from 'react-router';
-
 import App from './components/app';
 import Bookshelf from './components/bookshelves/bookshelf';
 import BookshelfList from './components/bookshelves/bookshelf_list';
@@ -13,8 +12,8 @@ const routes = (
   <Router history={browserHistory}>
     <Route path='/' component={App}>
       <IndexRoute component={BookshelfList} />
-      {/*<Route path='bookshelves/' componenet={Bookshelf} />*/}
-      <Route path='bookshelves/:bookshelfId' component={Bookshelf} />
+    <Route path='/bookshelves' component={Bookshelf} />
+  <Route path='/bookshelves/:bookshelfId' component={Bookshelf} />
     </Route>
   </Router>
 );

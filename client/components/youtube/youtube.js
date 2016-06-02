@@ -15,6 +15,7 @@ class YouTube extends Component {
       videos: [],
       selectedVideo: null
     };
+    this.videoSearch(this.props.term);
     this.videoSearch('how to learn');
   }
 
@@ -27,13 +28,16 @@ class YouTube extends Component {
     });
   }
 
+  componentWillReceiveProps (props) {
+    this.videoSearch(props.term);
+  }
+
   render() {
-    const videoSearch = _.debounce((term) => {this.videoSearch(term) }, 1000);
 
     return (
       <div className='youtube'>
-        <SearchBar onSearchTermChange={videoSearch} />
-        <h3 className='results'><a href= 'https://www.youtube.com/'><span className='youtube-red'>YouTube </span></a>Results</h3>
+        {/*<SearchBar onSearchTermChange={videoSearch} />*/}
+      <h3 className='results'><a href= 'https://www.youtube.com/' target='_blank'><span className='youtube-red'>YouTube </span></a>Results</h3>
         <VideoDetail video={this.state.selectedVideo} />
         <VideoList
           onVideoSelect={selectedVideo => this.setState({selectedVideo}) }

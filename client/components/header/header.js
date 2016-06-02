@@ -8,7 +8,7 @@ class Header extends Component {
     event.preventDefault();
 
     Meteor.call('bookshelves.insert', (error, bookshelfId) => {
-      browserHistory.push(`/bookshelves/${bookshelfId}`);
+      browserHistory.push(`/bookshelves`);
     });
   }
 
