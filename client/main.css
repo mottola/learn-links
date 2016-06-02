@@ -101,8 +101,9 @@ nav navbar-nav:hover {
 
 .copyright {
   text-align: center;
-  margin-top: 20px;
   width:100%;
+  position:fixed;
+  bottom: 0;
 }
 
 .green {
@@ -141,4 +142,8 @@ h3 a:hover {
 
 .media-heading:hover {
   color: rgb(112, 223, 1);
+}
+
+a:-webkit-any-link {
+  text-decoration: none;
 }

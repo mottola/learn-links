@@ -4,7 +4,7 @@ import Brand from './brand/brand';
 import SearchBar from './search-bar/search-bar';
 import YouTube from './youtube/youtube';
 import Footer from './footer/footer';
-import RedditLinks from './reddit/reddit';
+// import Reddit from './reddit/reddit';
 // import CourseraLinks from './coursera/coursera';
 // import EdxLinks from './edx/edx';
 // import KhanLinks from './khan/khan';
@@ -33,15 +33,15 @@ class App extends Component {
       <Brand />
       <SearchBar onSearchTermChange={this.onSearchTermChange.bind(this)} term={this.state.term} />
       <YouTube term={this.state.term} />
-      {/*<RedditLinks />
-      <EdxLinks />
+      {/*<Reddit />*/}
+      {/*<EdxLinks />
       <CourseraLinks />
       <EdxLinks />
       <KhanLinks />
       <QuoraLinks />
       <StackOverflowLinks />
-      <ScholarLinks />*/}
-      {/*<AmazonLinks />*/}
+      <ScholarLinks />
+      <AmazonLinks />*/}
       <Footer />
     </div>
   );

@@ -1,32 +1,47 @@
-// // Import the React library
+// import _ from 'lodash';
 // import React, { Component } from 'react';
-// // Import ReactDOM library
 // import ReactDOM from 'react-dom';
-// // Import axios for http requests
-// import axios from 'axios';
-// // Import search bar
 // import SearchBar from '../search-bar/search-bar';
+// import RedditList from './reddit-list';
+// import RedditDetail from './reddit-detail';
+// import Nraw from 'nraw';
 //
-// const RedditList = `https://www.reddit.com/search.json?q=${term}`;
+// class Reddit extends Component {
+//   constructor(props) {
+//     super(props);
+//
+//     this.state = {
+//       titles: [],
+//       selectedTitle: null
+//     };
+//     this.redditSearch(this.props.term);
+//     this.redditSearch('how to learn');
+//   }
+//
+//   redditSearch(term) {
+//     console.log(term);
+//     Nraw.search('algorithms').exec(function(term) {
+//       console.log(data);
+//     });
+//   }
 //
 //
-// // array.map will loop through an array
-// const RedditLinks = (props) => {
-//   const RedditItems = props.titles.map((title) => {
+//   componentWillReceiveProps (props) {
+//     this.redditSearch(props.term);
+//   }
+//
+//   render() {
+//
 //     return (
-//       <div>
-//         onVideoSelect={props.onThreadSelect}
-//         key={title}
-//         video={video}
+//       <div className='reddit'>
+//         <h3 className='results'><a href= 'https://www.reddit.com/' target='_blank'><span className='youtube-red'>YouTube </span></a>Results</h3>
+//         <RedditDetail title={this.state.selectedThread} />
+//         <RedditList
+//           onThreadSelect={selectedThread => this.setState({selectedThread}) }
+//           titles={this.state.titles} />
 //       </div>
 //     );
-//   });
+//   }
+// }
 //
-//   return (
-//     <ul className='col-md-4 list-group'>
-//       {linkItems}
-//     </ul>
-//   );
-// };
-//
-// export default RedditList;
+// export default Reddit;

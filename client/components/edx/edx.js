@@ -8,6 +8,7 @@
 // import SearchBar from '../search-bar';
 //
 // const edxSearch = `https://edx.com/api/courses/v1/courses/${props}`;
+// https://www.edx.org/course?search_query=Algebra
 //
 // class EdxLinks extends Component {
 //   constructor(props) {

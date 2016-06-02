@@ -6,6 +6,8 @@
 // import VideoDetail from './video-detail';
 // import axios from 'axios';
 // const KHAN_API = `http://www.khanacademy.org/api/v1/videos/${term}`;
+
+// https://www.khanacademy.org/search?referer=%2F&page_search_query=Algorithms
 //
 // class KhanLinks extends Component {
 //   constructor(props) {

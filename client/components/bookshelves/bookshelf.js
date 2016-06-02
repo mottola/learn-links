@@ -9,7 +9,6 @@ class Bookshelf extends Component {
 
     return (
       <div>
-        <BookshelvesEditor bookshelf={this.props.bookshelf} />
         <BookshelvesViewer bookshelf={this.props.bookshelf} />
       </div>
     );
