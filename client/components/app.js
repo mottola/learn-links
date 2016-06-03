@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+// import BookshelfButton from './bookshelf-button/bookshelf-button';
 import Header from './header/header';
 import Brand from './brand/brand';
 import SearchBar from './search-bar/search-bar';
@@ -33,6 +34,7 @@ class App extends Component {
       <Brand />
       <SearchBar onSearchTermChange={this.onSearchTermChange.bind(this)} term={this.state.term} />
       <YouTube term={this.state.term} />
+      {/*<BookshelfButton />*/}
       {/*<Reddit />*/}
       {/*<EdxLinks />
       <CourseraLinks />

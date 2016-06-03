@@ -1,4 +1,5 @@
 import React from 'react';
+import BookshelfButton from '../bookshelf-button/bookshelf-button';
 
 const VideoDetail = ({video}) => {
   if(!video){
@@ -12,7 +13,9 @@ const VideoDetail = ({video}) => {
       <div className='embed-responsive embed-responsive-16by9'>
         <iframe className='embed-responsive-item' src={url}></iframe>
       </div>
-        <button className='btn btn-primary btn-md'>Add to Bookshelf</button>
+        <div>
+          <BookshelfButton />
+        </div>
     </div>
   );
 };
