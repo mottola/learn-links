@@ -122,6 +122,22 @@ nav navbar-nav:hover {
   color: #e52d27;
 }
 
+.reddit-blue {
+  color: #24A0ED;
+}
+
+.khan-green {
+  color: #9DB63B;
+}
+
+.coursera-blue {
+  color: #3277b2;
+}
+
+.quora-red {
+  color: #b92b27;
+}
+
 h3 a:hover {
   text-decoration: none;
   color: #ed2f28;

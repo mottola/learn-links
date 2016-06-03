@@ -15,8 +15,10 @@ class YouTube extends Component {
       videos: [],
       selectedVideo: null
     };
+
     this.videoSearch(this.props.term);
     this.videoSearch('how to learn');
+
   }
 
   videoSearch(term) {

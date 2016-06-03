@@ -1,11 +1,18 @@
 import React, { Component } from 'react';
+import Accounts from '../accounts/accounts';
+import { Link, browserHistory } from 'react-router';
 // import BookshelfCreateMenu from './bookshelf-create-menu';
 
 
 class BookshelfButton extends Component {
 
-  addBookshelf(bookshelf) {
-    console.log('Bookshelf clicked');
+
+  onBookshelfClick(event) {
+    event.preventDefault();
+
+    Meteor.call('bookshelves.insert', (error, bookshelfId) => {
+      browserHistory.push(`/bookshelves`);
+    });
   }
 
   render() {
@@ -23,7 +30,7 @@ class BookshelfButton extends Component {
               <option value="Python"></option>
               <option value='New Bookshelf' type='text' id='bookshelves' placeholder='New bookshelf'></option>
               </datalist>
-              <button onClick={this.onBookshelfClick} className='btn btn-primary btn-md'>Add to Bookshelf</button>
+              <button onClick={this.onBookshelfClick.bind(this)} className='btn btn-primary btn-md'>Add to Bookshelf</button>
           </form>
       </div>
     );

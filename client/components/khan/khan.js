@@ -35,7 +35,7 @@
 //     return (
 //       <div>
 //         <SearchBar onSearchTermChange={videoSearch} />
-//         <h3 className='results'><span className='youtube-red'>Khan</span> Results</h3>
+//         <h3 className='results'><span className='khan-green'>Khan</span> Results</h3>
 //         <VideoDetail video={this.state.selectedVideo} />
 //         <VideoList
 //           onVideoSelect={selectedVideo => this.setState({selectedVideo}) }
