@@ -5,6 +5,7 @@ import Brand from './brand/brand';
 import SearchBar from './search-bar/search-bar';
 import YouTube from './youtube/youtube';
 import Footer from './footer/footer';
+// import BookshelfCreateMenu from './bookshelf-button/bookshelf-create-menu';
 // import Reddit from './reddit/reddit';
 // import CourseraLinks from './coursera/coursera';
 // import EdxLinks from './edx/edx';
@@ -34,6 +35,7 @@ class App extends Component {
       <Brand />
       <SearchBar onSearchTermChange={this.onSearchTermChange.bind(this)} term={this.state.term} />
       <YouTube term={this.state.term} />
+      {/*<BookshelfCreateMenu />*/}
       {/*<BookshelfButton />*/}
       {/*<Reddit />*/}
       {/*<EdxLinks />

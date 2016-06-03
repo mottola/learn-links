@@ -20,7 +20,7 @@ class Header extends Component {
             <a><Accounts /></a>
           </li>
           <li>
-            <a href='#' onClick={this.onBookshelfClick.bind(this)}>New Bookshelf</a>
+            <a href='#' onClick={this.onBookshelfClick.bind(this)}>My Bookshelves</a>
           </li>
         </ul>
       </nav>

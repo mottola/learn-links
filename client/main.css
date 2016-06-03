@@ -130,7 +130,8 @@ h3 a:hover {
 .btn-primary {
   background-color: #4885ed;
   border: none;
-  margin-top: 2px;
+  height: 30px;
+  margin-top: 5px;
   margin-bottom: 5px;
 
 }
@@ -146,4 +147,10 @@ h3 a:hover {
 
 a:-webkit-any-link {
   text-decoration: none;
+}
+
+.shelf {
+  width: 178px;
+  height: 30px;
+  margin-right: 5px;
 }
