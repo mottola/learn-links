@@ -1,5 +1,5 @@
 import React from 'react';
-import BookshelfButton from '../bookshelf-button/bookshelf-button';
+import BookshelfButton from '../bookshelves/bookshelf-button';
 
 const VideoDetail = ({video}) => {
   if(!video){
