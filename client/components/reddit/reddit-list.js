@@ -3,12 +3,12 @@ import RedditListItem from './reddit-list-item';
 
 // array.map will loop through an array
 const RedditList = (props) => {
-  const redditItems = props.titles.map((title) => {
+  const redditItems = props.children.map((child) => {
     return (
       <RedditListItem
         onThreadSelect={props.onThreadSelect}
-        key={data.title}
-        title={title} />
+        key={child.data.title}
+        data={child.data} />
     );
   });
 

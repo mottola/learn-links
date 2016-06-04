@@ -8,7 +8,7 @@ Meteor.methods({
     return Bookshelves.insert({
       // Default Bookshelf
       createdAt: new Date(),
-      content: '',
+      content: [],
       ownerId: this.userId
     });
   },
@@ -24,4 +24,4 @@ Meteor.methods({
   }
 });
 
-export const Bookshelves = new Mongo.Collection('bookshelves');
+export const BookshelfCollection = new Mongo.Collection('bookshelves-collection');

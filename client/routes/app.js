@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 // import BookshelfButton from './bookshelf-button/bookshelf-button';
-import Header from './header/header';
-import Brand from './brand/brand';
-import SearchBar from './search-bar/search-bar';
-import YouTube from './youtube/youtube';
-import Footer from './footer/footer';
+import Header from '../components/header/header';
+import Brand from '../components/brand/brand';
+import SearchBar from '../components/search-bar/search-bar';
+import YouTube from '../components/youtube/youtube';
+import Footer from '../components/footer/footer';
 // import BookshelfCreateMenu from './bookshelf-button/bookshelf-create-menu';
-import Reddit from './reddit/reddit';
+import Reddit from '../components/reddit/reddit';
 // import CourseraLinks from './coursera/coursera';
 // import EdxLinks from './edx/edx';
 // import KhanLinks from './khan/khan';

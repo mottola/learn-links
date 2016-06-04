@@ -12,7 +12,7 @@ class Header extends Component {
             <a><Accounts /></a>
           </li>
           <li>
-            <a href='#'>My Bookshelves</a>
+            <Link to='/bookshelves'>My Bookshelves</Link>
           </li>
         </ul>
       </nav>

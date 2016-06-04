@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import { createContainer } from 'meteor/react-meteor-data';
-import { Bookshelves } from '../../../imports/collections/bookshelves';
+import { BookshelfCollection } from '../../../imports/collections/bookshelves-collection';
 import BookshelvesViewer from './bookshelf_viewer';
+import BookshelfList from './bookshelf_list';
 
 class Bookshelf extends Component {
   render() {
@@ -10,14 +11,19 @@ class Bookshelf extends Component {
     return (
       <div>
         <BookshelvesViewer bookshelf={this.props.bookshelf} />
+        <BookshelfList />
       </div>
     );
   }
 }
 
-export default createContainer((props) => {
-  const { bookshelfId } = props.params;
-  Meteor.subscribe('bookshelves');
+// export default createContainer((props) => {
+//   Meteor.subscribe('bookshelves-collection');
+//   const bookshelfId = 0;
+//   if (bookshelfId) {
+//     return { bookshelf: Bookshelves.findOne(bookshelfId) };
+//   } else {
 
-  return { bookshelf: Bookshelves.findOne(bookshelfId) };
-}, Bookshelf) ;
+  // }
+// }, Bookshelf) ;
+export default Bookshelf;

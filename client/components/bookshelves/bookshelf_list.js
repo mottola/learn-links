@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import { createContainer } from 'meteor/react-meteor-data';
-import { Bookshelves } from '../../../imports/collections/bookshelves';
+import { BookshelfCollection } from '../../../imports/collections/bookshelves-collection';
 import { Link } from 'react-router';
+import BookshelfList from './bookshelf_list';
+import BookshelfViewer from './bookshelf_viewer';
 
 class BookshelvesList extends Component {
 
@@ -39,5 +41,5 @@ class BookshelvesList extends Component {
 export default createContainer(() => {
   Meteor.subscribe('bookshelves');
 
-  return { bookshelves: Bookshelves.find({}).fetch() };
+  return { bookshelves: BookshelfCollection.find({}).fetch() };
 }, BookshelvesList);

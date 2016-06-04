@@ -10,9 +10,7 @@ class BookshelfButton extends Component {
   onBookshelfClick(event) {
     event.preventDefault();
 
-    Meteor.call('bookshelves.insert', (error, bookshelfId) => {
-      browserHistory.push(`/bookshelves`);
-    });
+    Meteor.call('bookshelves.insert');
   }
 
   render() {

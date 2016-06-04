@@ -12,7 +12,7 @@ class Reddit extends Component {
     super(props);
 
     this.state = {
-      titles: [],
+      children: [],
       selectedTitle: null
     };
     this.redditSearch(this.props.term);
@@ -22,18 +22,24 @@ class Reddit extends Component {
   // catches and loads data before app is rendered to DOM
   redditSearch(term) {
     // Test axios request
-    axios.get('https://www.reddit.com/search.json?q=javascript&limit=5')
+    axios.get('https://www.reddit.com/search.json?q=' + term + '&limit=5')
 
       // change of state based on API object keys
       .then(response => {
-        console.log(response);
+        console.log(response.data.data.children);
+        this.setState({
+          children: response.data.data.children
+        });
       })
-      .catch(response => {
-        console.log(response);
-      });
+      // .catch(response => {
+      //   console.log(response);
+      // });
   }
   // this.setState({ images: response.data.data })
-
+  componentWillReceiveProps (props) {
+    this.redditSearch(props.term);
+  }
+  
   render() {
 
     return (
@@ -42,7 +48,7 @@ class Reddit extends Component {
         <RedditDetail title={this.state.selectedThread} />
         <RedditList
           onThreadSelect={selectedThread => this.setState({selectedThread}) }
-          titles={this.state.titles} />
+          children={this.state.children} />
       </div>
     );
   }
