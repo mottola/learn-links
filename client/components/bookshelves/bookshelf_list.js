@@ -1,11 +1,9 @@
 import React, { Component } from 'react';
 import { createContainer } from 'meteor/react-meteor-data';
-import { BookshelfCollection } from '../../../imports/collections/bookshelves-collection';
+import { Bookshelves } from '../../../imports/collections/bookshelves';
 import { Link } from 'react-router';
-import BookshelfList from './bookshelf_list';
-import BookshelfViewer from './bookshelf_viewer';
 
-class BookshelvesList extends Component {
+class BookshelfList extends Component {
 
   onBookshelfRemove(bookshelf) {
     Meteor.call('bookshelves.remove', bookshelf);
@@ -41,5 +39,5 @@ class BookshelvesList extends Component {
 export default createContainer(() => {
   Meteor.subscribe('bookshelves');
 
-  return { bookshelves: BookshelfCollection.find({}).fetch() };
-}, BookshelvesList);
+  return { bookshelves: Bookshelves.find({}).fetch() };
+}, BookshelfList);

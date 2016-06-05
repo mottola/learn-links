@@ -1,7 +1,6 @@
 import { Mongo } from 'meteor/mongo';
 
 // add Meteor methods for add/edit/delete
-
 Meteor.methods({
   // add Bookshelf
   'bookshelves.insert': function () {
@@ -24,4 +23,4 @@ Meteor.methods({
   }
 });
 
-export const BookshelfCollection = new Mongo.Collection('bookshelves-collection');
+export const Bookshelves = new Mongo.Collection('bookshelves');

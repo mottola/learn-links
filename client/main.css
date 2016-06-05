@@ -170,3 +170,15 @@ a:-webkit-any-link {
   height: 30px;
   margin-right: 5px;
 }
+
+.results {
+  text-align: center;
+}
+
+.reddit p {
+  color: black;
+}
+
+.reddit {
+  border: 1px solid #24A0ED;
+}

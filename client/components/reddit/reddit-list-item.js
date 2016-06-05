@@ -1,18 +1,29 @@
 import React from 'react';
+import BookshelfButton from '../bookshelves/bookshelf_button';
 
-const RedditListItem = ({data, onThreadSelect}) => {
+const RedditListItem = ({data, onChildSelect}) => {
   console.log(data);
+  const titleId = data.title;
+  const headerId = data.header_title;
+  const descriptionId = data.public_description;
+  const img = data.header_img;
+  const url = `https://www.reddit.com${data.url}`;
+
   return (
-    <li onClick={() => onThreadSelect(title)} className='list-group-item'>
-      <div className='video-list media'>
-        <div className='media-left'>
-          <img className='media-object' src={data.permalink}/>
-        </div>
-        <div className='media-body'>
-          <div className='media-heading'>{data.title}</div>
-        </div>
-      </div>
-    </li>
+    <span>
+      <span className="thumbnail reddit">
+        <a href={url} target='_blank'>
+        <img src={img} />
+        <span className="caption">
+          <h3 className='reddit-blue'>{titleId}</h3>
+          <h4>{headerId}</h4>
+          <p>{descriptionId}</p>
+        </span>
+        </a>
+        <BookshelfButton />
+      </span>
+    </span>
+
   );
 };
 

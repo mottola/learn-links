@@ -1,11 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Router, Route, IndexRoute, browserHistory } from 'react-router';
+
 import App from './routes/app';
-import Bookshelf from './components/bookshelves/bookshelf';
+import BookshelfMain from './components/bookshelves/bookshelf_main';
 import BookshelfList from './components/bookshelves/bookshelf_list';
-import BookshelfCollection from '../imports/collections/bookshelves-collection';
-import Bookshelves from './routes/bookshelves';
+import { Bookshelves } from '../imports/collections/bookshelves';
 import Header from './components/header/header';
 
 // routes using react-router

@@ -2,13 +2,12 @@ import React, { Component } from 'react';
 // import BookshelfButton from './bookshelf-button/bookshelf-button';
 import Header from '../components/header/header';
 import Brand from '../components/brand/brand';
-import SearchBar from '../components/search-bar/search-bar';
+import SearchBar from '../components/searchbar/searchbar';
 import YouTube from '../components/youtube/youtube';
 import Footer from '../components/footer/footer';
-// import BookshelfCreateMenu from './bookshelf-button/bookshelf-create-menu';
 import Reddit from '../components/reddit/reddit';
 // import CourseraLinks from './coursera/coursera';
-// import EdxLinks from './edx/edx';
+// import Edx from '../components/edx/edx';
 // import KhanLinks from './khan/khan';
 // import StackOverflowLinks from './stack-overflow/stack-overflow';
 // import QuoraLinks from './quora/quora';
@@ -34,14 +33,14 @@ class App extends Component {
       {this.props.children}
       <Brand />
       <SearchBar onSearchTermChange={this.onSearchTermChange.bind(this)} term={this.state.term} />
-      <YouTube term={this.state.term} />
-      <Reddit term={this.state.term} />
-      {/*<BookshelfCreateMenu />*/}
-      {/*<BookshelfButton />*/}
-
+      <div className='container-fluid'>
+        <YouTube term={this.state.term} />
+      </div>
+        <Reddit term={this.state.term} />
+      {/*<Edx term={this.state.term} />*/}
       {/*<EdxLinks />
       <CourseraLinks />
-      <EdxLinks />
+
       <KhanLinks />
       <QuoraLinks />
       <StackOverflowLinks />

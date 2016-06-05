@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import Accounts from '../accounts/accounts';
 import { Link, browserHistory } from 'react-router';
-// import BookshelfCreateMenu from './bookshelf-create-menu';
-
 
 class BookshelfButton extends Component {
 

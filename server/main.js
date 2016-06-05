@@ -1,9 +1,10 @@
 import { Meteor } from 'meteor/meteor';
-import { BookshelfCollection } from '../imports/collections/bookshelves-collection';
+import { Bookshelves } from '../imports/collections/bookshelves';
+import cors from 'cors';
 
 Meteor.startup(() => {
   // code to run on server at startup
-  Meteor.publish('bookshelves-collection', function () {
+  Meteor.publish('bookshelves', function () {
     return Bookshelves.find({ ownerId: this.userId });
   });
 });

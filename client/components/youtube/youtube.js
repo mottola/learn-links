@@ -2,7 +2,7 @@ import _ from 'lodash';
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import YTSearch from 'youtube-api-search';
-import SearchBar from '../search-bar/search-bar';
+import SearchBar from '../searchbar/searchbar';
 import VideoList from './video-list';
 import VideoDetail from './video-detail';
 const API_KEY = 'AIzaSyDR39QgNOpp7npfTSz5oc1yu5VNUbG33v4';

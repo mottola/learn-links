@@ -1,25 +1,51 @@
-// // Import the React library
+// import _ from 'lodash';
 // import React, { Component } from 'react';
-// // Import ReactDOM library
 // import ReactDOM from 'react-dom';
-// // Import axios for http requests
-// import axios from 'axios';
-// // Import search bar
-// import SearchBar from '../search-bar';
+// import SearchBar from '../searchbar/searchbar';
+// import VideoList from './video_list';
+// import VideoDetail from './video_detail';
 //
-// const courseraSearch = `https://api.coursera.org/api/courses.v1?q=search&query=${props}`;
-//
-// class CourseraLinks extends Component {
+// class Edx extends Component {
 //   constructor(props) {
 //     super(props);
 //
-//
-//     this.state={ links: [] };
+//     this.state = {
+//       children: [],
+//       selectedChild: null
+//     };
+//     this.redditSearch(this.props.term);
+//     this.redditSearch('learning');
 //   }
 //
-//   componentWillMount() {
-//     axios.get({courseraSearch});
+//   // catches and loads data before app is rendered to DOM
+//   redditSearch(term) {
+//     // Test axios request
+//     axios.get(`https://www.edx.org/course?search_query=algebra`)
+//       // change of state based on API object keys
+//       .then(response => {
+//         console.log(response);
+//         this.setState({
+//           children: response.data.data.children
+//         });
+//       })
+//   }
+//
+//   componentWillReceiveProps (props) {
+//     this.redditSearch(props.term);
+//   }
+//
+//   render() {
+//
+//     return (
+//       <div className='reddit'>
+//         <h3 className='results'><a href= 'https://www.reddit.com/' target='_blank'><span className='reddit-blue'>Reddit </span></a>Results</h3>
+//         <RedditDetail child={this.state.selectedChild} />
+//         <RedditList
+//           onChildSelect={selectedChild => this.setState({selectedChild}) }
+//           children={this.state.children} />
+//       </div>
+//     );
 //   }
 // }
 //
-// export default CourseraLinks;
+// export default Edx;
