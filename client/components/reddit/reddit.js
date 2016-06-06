@@ -24,6 +24,9 @@ class Reddit extends Component {
     axios.get(`https://www.reddit.com/subreddits/search.json?q=${term}&limit=4`)
       // change of state based on API object keys
       .then(response => {
+        if (!response.data.data) {
+          return;
+        }
         this.setState({
           children: response.data.data.children
         });

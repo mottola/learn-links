@@ -2,16 +2,14 @@ import React from 'react';
 import BookshelfButton from '../bookshelves/bookshelf_button';
 
 const RedditListItem = ({data, onChildSelect}) => {
-  console.log(data);
   const titleId = data.title;
   const headerId = data.header_title;
-  const descriptionId = data.public_description;
+  const descriptionId = data.public_description.substr(0, 200) + '...';
   const img = data.header_img;
   const url = `https://www.reddit.com${data.url}`;
 
   return (
-    <span>
-      <span className="thumbnail reddit">
+      <div className="thumbnail reddit">
         <a href={url} target='_blank'>
         <img src={img} />
         <span className="caption">
@@ -21,9 +19,7 @@ const RedditListItem = ({data, onChildSelect}) => {
         </span>
         </a>
         <BookshelfButton />
-      </span>
-    </span>
-
+      </div>
   );
 };
 

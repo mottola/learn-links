@@ -12,9 +12,8 @@ import Header from './components/header/header';
 const routes = (
   <Router history={browserHistory}>
     <Route path='/' component={App}></Route>
-
-    <Route path='/bookshelves' component={Bookshelves}>
-    </Route>
+    {/*<Route path='/bookshelves' component={Bookshelves}>*/}
+    {/*</Route>*/}
   </Router>
 );
 

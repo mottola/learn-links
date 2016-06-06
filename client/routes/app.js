@@ -7,7 +7,7 @@ import YouTube from '../components/youtube/youtube';
 import Footer from '../components/footer/footer';
 import Reddit from '../components/reddit/reddit';
 // import CourseraLinks from './coursera/coursera';
-// import Edx from '../components/edx/edx';
+import Edx from '../components/edx/edx';
 // import KhanLinks from './khan/khan';
 // import StackOverflowLinks from './stack-overflow/stack-overflow';
 // import QuoraLinks from './quora/quora';
@@ -37,7 +37,7 @@ class App extends Component {
         <YouTube term={this.state.term} />
       </div>
         <Reddit term={this.state.term} />
-      {/*<Edx term={this.state.term} />*/}
+      <Edx term={this.state.term} />
       {/*<EdxLinks />
       <CourseraLinks />
 

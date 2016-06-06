@@ -181,4 +181,5 @@ a:-webkit-any-link {
 
 .reddit {
   border: 1px solid #24A0ED;
+  float: left;
 }
