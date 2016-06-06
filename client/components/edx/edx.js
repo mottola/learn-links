@@ -1,19 +1,17 @@
 import _ from 'lodash';
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-import axios from 'axios';
 import SearchBar from '../searchbar/searchbar';
 import { Meteor } from 'meteor/meteor';
-// import VideoList from './video_list';
-// import VideoDetail from './video_detail';
+import EdxList from './edx_list';
 
 class Edx extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      children: [],
-      selectedChild: null
+      results: [],
+      selectedResult: null
     };
     this.edxSearch(this.props.term);
     this.edxSearch('learning');
@@ -21,33 +19,37 @@ class Edx extends Component {
 
   // catches and loads data before app is rendered to DOM
   edxSearch(term) {
+    // closure
+    var foo = this;
     // Test axios request
   Meteor.call(`edx`, term, function (error, results) {
+    if (!results) {
+      return;
+    }
     console.log(results);
     // change of state based on API object keys
-      // this.setState({
-      //   results: response.data.data.children
-      // });
+      foo.setState({
+        results: results
+      });
   });
 
   }
-}
-//   componentWillReceiveProps (props) {
-//     this.edxSearch(props.term);
-//   }
-//
+
   render() {
 
     return (
-      <div className='reddit'>
-        <h3 className='results'><a href= 'https://www.reddit.com/' target='_blank'><span className='reddit-blue'>Reddit </span></a>Results</h3>
-        <RedditDetail child={this.state.selectedChild} />
-        <RedditList
-          onChildSelect={selectedChild => this.setState({selectedChild}) }
-          children={this.state.children} />
+      <div className='edx'>
+        <h3 className='results'><a href= 'https://www.edx.org/' target='_blank'><span className='reddit-blue'>edX </span></a>Results</h3>
+        <EdxList
+          onResultSelect={selectedResult => this.setState({selectedResult}) }
+          results={this.state.results} />
       </div>
     );
   }
-// }
 
+  componentWillReceiveProps (props) {
+    this.edxSearch(props.term);
+  }
+
+}
 export default Edx;

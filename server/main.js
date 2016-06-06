@@ -16,7 +16,6 @@ Meteor.methods({
     if (!term) {
       return [];
     }
-    console.log('HEEEEEYYY');
     const response = Meteor.http.call('GET', 'https://www.edx.org/search/api/all', {} );
     return response.data.filter(function (item) {
       if (item.l.toLowerCase().indexOf(term.toLowerCase()) !== -1) {
@@ -24,6 +23,6 @@ Meteor.methods({
       } else {
         return false;
       }
-    });
+    }).slice(0, 5);
   }
-})
+});
