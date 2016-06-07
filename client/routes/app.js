@@ -9,7 +9,7 @@ import Reddit from '../components/reddit/reddit';
 // import CourseraLinks from './coursera/coursera';
 import Edx from '../components/edx/edx';
 // import KhanLinks from './khan/khan';
-// import StackOverflowLinks from './stack-overflow/stack-overflow';
+import StackOverflow from '../components/stack_overflow/stack_overflow';
 // import QuoraLinks from './quora/quora';
 // import ScholarLinks from './scholar/scholar';
 // import AmazonLinks from './amazon/amazon';
@@ -38,12 +38,13 @@ class App extends Component {
       </div>
         <Reddit term={this.state.term} />
       <Edx term={this.state.term} />
+      <StackOverflow term={this.state.term} />
       {/*<EdxLinks />
       <CourseraLinks />
 
       <KhanLinks />
       <QuoraLinks />
-      <StackOverflowLinks />
+
       <ScholarLinks />
       <AmazonLinks />*/}
       <Footer />

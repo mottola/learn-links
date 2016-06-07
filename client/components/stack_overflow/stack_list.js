@@ -1,15 +1,16 @@
 import React from 'react';
-import EdxListItem from './edx_list_item';
+import StackListItem from './stack_list_item';
 
 // array.map will loop through an array
-const EdxList = (props) => {
-  const edxItems = props.results.map((result) => {
+const StackList = (props) => {
+  const stackItems = props.results.map((result) => {
+    console.log(results);
     if (!result) {
       return null;
     }
       return (
         <div className='col-sm-3' key={result.l}>
-        <EdxListItem
+        <StackListItem
           onThreadSelect={props.onResultSelect}
           result={result} />
         </div>
@@ -17,9 +18,9 @@ const EdxList = (props) => {
     });
     return (
         <div className='row'>
-           {edxItems}
+           {stackItems}
         </div>
     );
 };
 
-export default EdxList;
+export default StackList;

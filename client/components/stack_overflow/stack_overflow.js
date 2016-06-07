@@ -3,9 +3,9 @@ import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import SearchBar from '../searchbar/searchbar';
 import { Meteor } from 'meteor/meteor';
-import EdxList from './edx_list';
+import StackList from './stack_list';
 
-class Edx extends Component {
+class StackOverflow extends Component {
   constructor(props) {
     super(props);
 
@@ -13,16 +13,16 @@ class Edx extends Component {
       results: [],
       selectedResult: null
     };
-    this.edxSearch(this.props.term);
-    this.edxSearch('learning');
+    this.stackSearch(this.props.term);
+    this.stackSearch('learning');
   }
 
   // catches and loads data before app is rendered to DOM
-  edxSearch(term) {
+  stackSearch(term) {
     // closure
     var foo = this;
     // Test axios request
-  Meteor.call(`edx`, term, function (error, results) {
+  Meteor.call(`stackOverflow`, term, function (error, results) {
     if (!results) {
       return;
     }
@@ -38,8 +38,8 @@ class Edx extends Component {
 
     return (
       <div>
-        <h3 className='results'><a href= 'https://www.edx.org/' target='_blank'><span className='edx-maroon'>edX </span></a>Courses</h3>
-        <EdxList
+        <h3 className='results'><a href= 'https://www.stackoverflow.com/' target='_blank'><span className='edx-maroon'>Stack Overflow</span></a>Results</h3>
+        <StackList
           onResultSelect={selectedResult => this.setState({selectedResult}) }
           results={this.state.results} />
       </div>
@@ -47,8 +47,8 @@ class Edx extends Component {
   }
 
   componentWillReceiveProps (props) {
-    this.edxSearch(props.term);
+    this.stackSearch(props.term);
   }
 
 }
-export default Edx;
+export default StackOverflow;
