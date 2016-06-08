@@ -22,6 +22,9 @@ class YouTube extends Component {
   }
 
   videoSearch(term) {
+    if (term == '') {
+      term = 'how to learn';
+    }
     YTSearch({key: API_KEY, term: term}, (videos) => {
       this.setState({
         videos: videos,

@@ -1,7 +1,7 @@
 // import React, { Component } from 'react';
 // import BookshelfButton from '../bookshelves/bookshelf_button';
 //
-// const StackListItem = ({result, onResultSelect}) => {
+// const QuoraListItem = ({result, onResultSelect}) => {
 //   const titleId = result.l;
 //   const img = result.img;
 //   const url = result.url;
@@ -21,4 +21,4 @@
 //   );
 // };
 //
-// export default StackListItem;
+// export default QuoraListItem;

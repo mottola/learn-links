@@ -18,7 +18,6 @@ const RedditListItem = ({data, onChildSelect}) => {
           <p>{descriptionId}</p>
         </span>
         </a>
-        <BookshelfButton />
       </div>
   );
 };

@@ -26,19 +26,34 @@ Meteor.methods({
     }).slice(0, 4);
   }
 });
-
-Meteor.methods({
-  stackOverflow: function (term) {
-    if (!term) {
-      return [];
-    }
-    const response = Meteor.http.call('GET', `http://stackoverflow.com/questions/tagged/${term}?sort=votes&pageSize=10`, {} );
-    return response.data.filter(function (item) {
-      if (item.l.toLowerCase().indexOf(term.toLowerCase()) !== -1) {
-        return true;
-      } else {
-        return false;
-      }
-    }).slice(0, 4);
-  }
-});
+// Meteor.methods({
+//   stackOverflow: function (term) {
+//     if (!term) {
+//       return [];
+//     }
+//     const response = Meteor.http.call('GET', `http://stackoverflow.com/questions/tagged/${term}?sort=votes&pageSize=10`, {} );
+//     return response.data.filter(function (item) {
+//       if (item.l.toLowerCase().indexOf(term.toLowerCase()) !== -1) {
+//         return true;
+//       } else {
+//         return false;
+//       }
+//     }).slice(0, 4);
+//   }
+// });
+//
+// Meteor.methods({
+//   quora: function (term) {
+//     if (!term) {
+//       return [];
+//     }
+//     const response = Meteor.http.call('GET', `https://www.quora.com/search.json?q=Algorithms`, {} );
+//     return response.data.filter(function (item) {
+//       if (item.l.toLowerCase().indexOf(term.toLowerCase()) !== -1) {
+//         return true;
+//       } else {
+//         return false;
+//       }
+//     }).slice(0, 4);
+//   }
+// });

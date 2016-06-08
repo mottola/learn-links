@@ -127,8 +127,12 @@ nav navbar-nav:hover {
   color: #24A0ED;
 }
 
+.stack-orange {
+  color: #FF9900;
+}
+
 .khan-green {
-  color: #9DB63B;
+  color: #669f25;
 }
 
 .coursera-blue {
@@ -196,12 +200,12 @@ a:-webkit-any-link {
 
 .thumbnail-reddit {
   padding: 10px;
-  height: 475px;
+  height: 375px;
 }
 
 .thumbnail-edx {
   padding: 10px;
-  height: 300px;
+  height: 365px;
 }
 
 .row {
