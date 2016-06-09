@@ -206,6 +206,7 @@ a:-webkit-any-link {
 .thumbnail-edx {
   padding: 10px;
   height: 365px;
+  margin-top: 20px;
 }
 
 .row {

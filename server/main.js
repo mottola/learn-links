@@ -2,9 +2,19 @@ import { Meteor } from 'meteor/meteor';
 import { Bookshelves } from '../imports/collections/bookshelves';
 import cors from 'cors';
 import HTTP from 'meteor/http';
+import fs from 'fs';
+import path from 'path';
+import KhanData from './khanVids.json';
+var khanResults = [];
 
 Meteor.startup(() => {
   // code to run on server at startup
+  fs.readFile('../learn-links/khanVids.json', function (err, data) {
+    if (err) {
+      throw err;
+    }
+    khanResults = JSON.parse(data);
+  });
 
   Meteor.publish('bookshelves', function () {
     return Bookshelves.find({ ownerId: this.userId });
@@ -23,9 +33,41 @@ Meteor.methods({
       } else {
         return false;
       }
-    }).slice(0, 4);
+    }).slice(0, 8);
+  },
+
+  khan: function(term) {
+    if (!term) {
+      return [];
+    }
+    return (
+      khanResults.filter(function(item) {
+        if (item.title.toLowerCase().indexOf(term.toLowerCase()) !== -1 ||
+            item.desc.toLowerCase().indexOf(term.toLowerCase()) !== -1) {
+          return true;
+        } else {
+          return false;
+        }
+      }).slice(0, 8)
+    )
   }
+    //
+    // quora: function (term) {
+    //   if (!term) {
+    //     return [];
+    //   }
+    //   const response = Meteor.http.call('GET', `https://www.quora.com/search.json?q=Algorithms`, {} );
+    //   return response.data.filter(function (item) {
+    //     if (item.l.toLowerCase().indexOf(term.toLowerCase()) !== -1) {
+    //       return true;
+    //     } else {
+    //       return false;
+    //     }
+    //   }).slice(0, 4);
+    // }
 });
+
+
 // Meteor.methods({
 //   stackOverflow: function (term) {
 //     if (!term) {
@@ -43,17 +85,5 @@ Meteor.methods({
 // });
 //
 // Meteor.methods({
-//   quora: function (term) {
-//     if (!term) {
-//       return [];
-//     }
-//     const response = Meteor.http.call('GET', `https://www.quora.com/search.json?q=Algorithms`, {} );
-//     return response.data.filter(function (item) {
-//       if (item.l.toLowerCase().indexOf(term.toLowerCase()) !== -1) {
-//         return true;
-//       } else {
-//         return false;
-//       }
-//     }).slice(0, 4);
-//   }
+
 // });

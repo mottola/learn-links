@@ -8,7 +8,7 @@ import Footer from '../components/footer/footer';
 import Reddit from '../components/reddit/reddit';
 // import CourseraLinks from './coursera/coursera';
 import Edx from '../components/edx/edx';
-import KhanLinks from '../components/khan/khan';
+import Khan from '../components/khan/khan';
 // import StackOverflow from '../components/stack_overflow/stack_overflow';
 // import Quora from '../components/quora/quora';
 // import ScholarLinks from './scholar/scholar';
@@ -36,12 +36,14 @@ class App extends Component {
       <div className='container-fluid'>
         <YouTube term={this.state.term} />
       </div>
-        <Reddit term={this.state.term} />
       <Edx term={this.state.term} />
+      <Reddit term={this.state.term} />
+      <Khan term={this.state.term} />
+
       {/*<StackOverflow term={this.state.term} />
       <Quora term={this.state.term} />*/}
       {/*<CourseraLinks />
-      <KhanLinks />
+
       <ScholarLinks />
       <AmazonLinks />*/}
       <Footer />

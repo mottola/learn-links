@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import BookshelfButton from '../bookshelves/bookshelf_button';
 
 const KhanListItem = ({result, onResultSelect}) => {
-  const titleId = result.l;
-  const img = result.img;
+  const titleId = result.title;
+  const img = result.thumb;
   const url = result.url;
 
   return (
