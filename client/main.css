@@ -102,7 +102,6 @@ nav navbar-nav:hover {
 .copyright {
   text-align: center;
   width:100%;
-  position:fixed;
   bottom: 0;
   margin-top: 30px;
 }
@@ -201,11 +200,14 @@ a:-webkit-any-link {
 .thumbnail-reddit {
   padding: 10px;
   height: 375px;
+  width: 100%;
 }
 
 .thumbnail-edx {
   padding: 10px;
-  height: 365px;
+  position: relative;
+  height: 375px;
+  overflow-x: scroll;
   margin-top: 20px;
 }
 
@@ -223,4 +225,25 @@ a:-webkit-any-link {
 
 .black:hover {
   color: rgb(112, 223, 1);
+}
+
+.thumbnail-khan {
+  padding: 10px;
+  height: 340px;
+  position: relative;
+  overflow-x: scroll;
+  margin-top: 20px;
+}
+
+.khan {
+  border: 1px solid #669f25;
+  float: left;
+}
+
+.link-to {
+  bottom: 0;
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  padding:5px;
 }

@@ -2,21 +2,21 @@ import React, { Component } from 'react';
 import BookshelfButton from '../bookshelves/bookshelf_button';
 
 const KhanListItem = ({result, onResultSelect}) => {
-  const titleId = result.title;
+  const titleId = result.name;
   const img = result.thumb;
   const url = result.url;
 
   return (
-      <div className="thumbnail-edx edx">
+      <div className="thumbnail-khan khan">
         <a href={url} target='_blank'>
-        <img src={img} />
+        <img src={img} width='250px' />
         <span className="caption">
           <h3 className='black'>{titleId}</h3>
-          <h4>{img}</h4>
-          <a href={url} target= '_blank'>Link to Answer</a>
+        <div className='link-to '>
+          <a className='btn btn-primary' href={url} target= '_blank'>Link to Video</a>
+        </div>
         </span>
         </a>
-        <BookshelfButton />
       </div>
   );
 };

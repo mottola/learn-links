@@ -4,12 +4,12 @@ import cors from 'cors';
 import HTTP from 'meteor/http';
 import fs from 'fs';
 import path from 'path';
-import KhanData from './khanVids.json';
 var khanResults = [];
 
 Meteor.startup(() => {
   // code to run on server at startup
-  fs.readFile('../learn-links/khanVids.json', function (err, data) {
+  console.log(__dirname);
+  fs.readFile( '../../../../../server/khanVids.json', function (err, data) {
     if (err) {
       throw err;
     }
@@ -42,8 +42,10 @@ Meteor.methods({
     }
     return (
       khanResults.filter(function(item) {
-        if (item.title.toLowerCase().indexOf(term.toLowerCase()) !== -1 ||
-            item.desc.toLowerCase().indexOf(term.toLowerCase()) !== -1) {
+        if(!item.name) {
+          item.name = '';
+        }
+        if (item.name.toLowerCase().indexOf(term.toLowerCase()) !== -1) {
           return true;
         } else {
           return false;

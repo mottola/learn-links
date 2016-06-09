@@ -39,7 +39,7 @@ class Khan extends Component {
     return (
       <div>
         <h3 className='results'><a href= 'https://www.khanacademy.org/' target='_blank'><span className='khan-green'>Khan Academy</span></a>Results</h3>
-        <QuoraList
+      <KhanList
           onResultSelect={selectedResult => this.setState({selectedResult}) }
           results={this.state.results} />
       </div>
@@ -47,7 +47,7 @@ class Khan extends Component {
   }
 
   componentWillReceiveProps (props) {
-    this.quoraSearch(props.term);
+    this.khanSearch(props.term);
   }
 
 }

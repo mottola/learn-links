@@ -34,16 +34,14 @@ class App extends Component {
       <Brand />
       <SearchBar onSearchTermChange={this.onSearchTermChange.bind(this)} term={this.state.term} />
       <div className='container-fluid'>
-        <YouTube term={this.state.term} />
+      <YouTube term={this.state.term} />
       </div>
       <Edx term={this.state.term} />
       <Reddit term={this.state.term} />
       <Khan term={this.state.term} />
-
       {/*<StackOverflow term={this.state.term} />
       <Quora term={this.state.term} />*/}
       {/*<CourseraLinks />
-
       <ScholarLinks />
       <AmazonLinks />*/}
       <Footer />

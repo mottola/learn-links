@@ -14,7 +14,9 @@ const EdxListItem = ({result, onResultSelect}) => {
           <h3 className='black'>{titleId}</h3>
         </span>
         </a>
-        <a href={url} target= '_blank'>Link to Course Page</a>
+        <div className='link-to '>
+          <a className='btn btn-primary' href={url} target= '_blank'>Link to Course</a>
+        </div>
       </div>
   );
 };

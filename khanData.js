@@ -11,7 +11,7 @@
 //         name: arr[i].translated_title,
 //         thumb: arr[i].thumbnail_urls.default,
 //         url: arr[i].relative_url,
-//         desc: arr[i].description
+//
 //       });
 //     } else {
 //       processChildren (arr[i].children);
