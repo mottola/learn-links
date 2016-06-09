@@ -8,7 +8,6 @@ var khanResults = [];
 
 Meteor.startup(() => {
   // code to run on server at startup
-  console.log(__dirname);
   fs.readFile( '../../../../../server/khanVids.json', function (err, data) {
     if (err) {
       throw err;

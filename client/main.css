@@ -199,6 +199,7 @@ a:-webkit-any-link {
 
 .thumbnail-reddit {
   position: relative;
+  width: 270px;
   height: 375px;
   overflow-x: scroll;
   margin-top: 20px;

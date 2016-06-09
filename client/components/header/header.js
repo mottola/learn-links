@@ -11,9 +11,6 @@ class Header extends Component {
           <li>
             <a><Accounts /></a>
           </li>
-          <li>
-            <Link to='/bookshelves'>My Bookshelves</Link>
-          </li>
         </ul>
       </nav>
     );

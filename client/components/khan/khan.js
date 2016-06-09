@@ -38,7 +38,7 @@ class Khan extends Component {
 
     return (
       <div>
-        <div width='100%' className='logo'><a href=       "https://www.khanacademy.org" target='_blank'><img width="200px" src='http://p6.zdassets.com/hc/settings_assets/526991/200061184/xxwUq19WH744A6CARsBwKA-smaller_logo.png'></img></a>
+        <div width='100%' className='logo'><a href=       "https://www.khanacademy.org" target='_blank'><img width="250px" src='http://p6.zdassets.com/hc/settings_assets/526991/200061184/xxwUq19WH744A6CARsBwKA-smaller_logo.png'></img></a>
         </div>
       <KhanList
           onResultSelect={selectedResult => this.setState({selectedResult}) }

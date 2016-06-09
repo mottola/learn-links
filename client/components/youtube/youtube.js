@@ -41,7 +41,9 @@ class YouTube extends Component {
 
     return (
       <div className='youtube'>
-        <h3 className='results'><a href= 'https://www.youtube.com' target='_blank'><span className='youtube-red'>YouTube </span></a>Results</h3>
+        <div width='100%' className= 'logo'>
+          <a href= 'https://www.youtube.com/' target='_blank'><img width='150px' src='https://www.seeklogo.net/wp-content/uploads/2011/02/youtube-logo-vector-400x400.png'></img></a>
+        </div>
         <VideoDetail video={this.state.selectedVideo} />
         <VideoList
           onVideoSelect={selectedVideo => this.setState({selectedVideo}) }
