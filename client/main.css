@@ -193,18 +193,19 @@ a:-webkit-any-link {
 }
 
 .edx {
-  border: 1px solid #ab2f52;
+  border: 1px solid #851232;
   float: left;
 }
 
 .thumbnail-reddit {
-  padding: 10px;
+  position: relative;
   height: 375px;
-  width: 100%;
+  overflow-x: scroll;
+  margin-top: 20px;
+  text-align: center;
 }
 
 .thumbnail-edx {
-  padding: 10px;
   position: relative;
   height: 375px;
   overflow-x: scroll;
@@ -228,11 +229,11 @@ a:-webkit-any-link {
 }
 
 .thumbnail-khan {
-  padding: 10px;
   height: 340px;
   position: relative;
   overflow-x: scroll;
   margin-top: 20px;
+  width: 270px;
 }
 
 .khan {
@@ -246,4 +247,17 @@ a:-webkit-any-link {
   width: 100%;
   text-align: center;
   padding:5px;
+}
+
+.caption h3, h4, p {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.logo {
+  text-align: center;
+}
+
+.space {
+  margin-top: 40px;
 }

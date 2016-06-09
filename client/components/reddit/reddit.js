@@ -41,8 +41,8 @@ class Reddit extends Component {
 
     return (
         <div>
-          <h3 className='results'><a href= "https://www.reddit.com/subreddits/" target='_blank'><span className='reddit-blue'>Subreddits </span></a>
-          </h3>
+          <div width='100%' className='logo'><a href= "https://www.reddit.com/subreddits/" target='_blank'><img width="200px" src='http://cdn.bleedingcool.net/wp-content/uploads/2014/11/reddit-logo.png'></img></a>
+        </div>
         <RedditList
           onChildSelect={selectedChild => this.setState({selectedChild}) }
           children={this.state.children} />

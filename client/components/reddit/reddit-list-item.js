@@ -11,13 +11,15 @@ const RedditListItem = ({data, onChildSelect}) => {
   return (
       <div className="thumbnail-reddit reddit">
         <a href={url} target='_blank'>
-        <img src={img} />
-        <span className="caption">
+        <img src={img} /></a>
+      <span className="caption">
           <h3 className='reddit-blue'>{titleId}</h3>
+          <div className='link-to'>
+            <a className='btn btn-primary' href={url} target= '_blank'>Link to Subreddit</a>
+          </div>
           <h4>{headerId}</h4>
           <p>{descriptionId}</p>
         </span>
-        </a>
       </div>
   );
 };

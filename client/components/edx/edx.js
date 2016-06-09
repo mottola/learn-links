@@ -37,8 +37,11 @@ class Edx extends Component {
   render() {
 
     return (
-      <div>
-        <h3 className='results'><a href= 'https://www.edx.org/' target='_blank'><span className='edx-maroon'>edX </span></a>Courses</h3>
+      <div className= 'space'>
+      <div width='100%' className= 'logo'>
+        <a href= 'https://www.edx.org/' target='_blank'><img src='https://www.edx.org/sites/default/files/theme/edx-logo-header.png'></img></a>
+      </div>
+
         <EdxList
           onResultSelect={selectedResult => this.setState({selectedResult}) }
           results={this.state.results} />
